@@ -11,7 +11,7 @@ class CommentBox extends Component {
     });
   };
   handleSubmit = e => {
-    e.preventdefault();
+    e.preventDefault();
     this.setState({ comment: "" });
   };
   render() {
