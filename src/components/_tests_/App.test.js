@@ -6,6 +6,9 @@ import CommentList from "../CommentList";
 
 it("shows a comment box", () => {
   const component = shallow(<App />);
-  expect(component.find(CommentBox).length).toEqual(1);
+
+  expect(component.find(CommentList).length).toEqual(1);
+});
+it("shows a comment list", () => {
   expect(component.find(CommentList).length).toEqual(1);
 });
