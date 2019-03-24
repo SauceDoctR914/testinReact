@@ -15,19 +15,20 @@ it("has a text area and a button", () => {
   expect(component.find("textarea").length).toEqual(1);
   expect(component.find("button").length).toEqual(1);
 });
-it("has a text area users can use to type", () => {
-  component.find("textarea").simulate("change", {
-    target: { value: "new comment" }
+describe("the text area", () => {
+  beforeEach(() => {
+    component.find("textarea").simulate("change", {
+      target: { value: "new comment" }
+    });
+    component.update();
   });
-  component.update();
-  expect(component.find("textarea").prop("value")).toEqual("new comment");
-});
-it("empties text area on submit", () => {
-  component.find("textarea").simulate("change", {
-    target: { value: "new comment" }
+
+  it("has a text area users can use to type", () => {
+    expect(component.find("textarea").prop("value")).toEqual("new comment");
   });
-  component.update();
-  component.find("form").simulate("submit");
-  component.update();
-  expect(component.find("textarea").prop("value")).toEqual("");
+  it("empties text area on submit", () => {
+    component.find("form").simulate("submit");
+    component.update();
+    expect(component.find("textarea").prop("value")).toEqual("");
+  });
 });
