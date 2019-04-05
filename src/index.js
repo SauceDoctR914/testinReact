@@ -1,13 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "components/App";
-import { Provider } from "react-redux";
-import { createStore } from "redux";
-import reducers from "reducers"; //gives us whatever we export from index.js in the reducers directory
+import Root from "Root";
+// import reducers from "reducers"; //gives us whatever we export from index.js in the reducers directory
 
 ReactDOM.render(
-  <Provider store={createStore(reducers, {})}>
+  <Root>
     <App />
-  </Provider>,
+  </Root>,
   document.getElementById("root")
 );

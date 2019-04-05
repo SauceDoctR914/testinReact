@@ -1,10 +1,10 @@
-state = {
+const initialState = {
   comments: []
 };
 
-const commentsReducer = (state, action) => {
+const commentsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SAVE_COMMENT:
+    case "SAVE_COMMENT":
       return [...state, action.payload];
     default:
       return state;

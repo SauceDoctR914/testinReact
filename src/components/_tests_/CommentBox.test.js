@@ -1,11 +1,17 @@
 import React from "react";
 import CommentBox from "components/CommentBox";
 import { mount, unmount, update } from "enzyme";
+import Root from "Root";
 //with full dom make sure to unmount
+
 let component;
 
 beforeEach(() => {
-  component = mount(<CommentBox />);
+  component = mount(
+    <Root>
+      <CommentBox />
+    </Root>
+  );
 });
 
 afterEach(() => {
