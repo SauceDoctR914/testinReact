@@ -9,9 +9,15 @@ class CreateExercise extends Component {
     complete: false
   };
 
-  handleChange(event) {
+  handleChange = event => {
     this.setState({ value: event.target.value });
-  }
+  };
+
+  handleChecked = () => {
+    this.setState(({ completed }) => ({
+      completed: !completed
+    }));
+  };
 
   render() {
     return (
