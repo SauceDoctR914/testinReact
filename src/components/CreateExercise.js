@@ -17,9 +17,10 @@ class CreateExercise extends Component {
     return (
       <div>
         <form>
-          <input name="title" value={this.state.title} />
+          <textarea name="description" value={this.state.description} />
           <select
             multiple={true}
+            name="weight"
             onChange={this.handleChange}
             value={[
               5,
@@ -43,6 +44,39 @@ class CreateExercise extends Component {
               95,
               100
             ]}
+          />
+          <select
+            multiple={true}
+            name="reps"
+            onChange={this.handleChange}
+            value={[
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20
+            ]}
+          />
+          <input
+            name="complete"
+            type="checkbox"
+            defaultChecked={this.state.complete}
+            onChange={this.handleChange}
           />
           <input type="submit" value="Submit" />
         </form>
