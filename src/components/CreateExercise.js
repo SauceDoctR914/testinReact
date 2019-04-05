@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class WorkoutPlan extends Component {
+class CreateExercise extends Component {
   state = {
     description: "",
     date: "",
@@ -20,4 +20,4 @@ class WorkoutPlan extends Component {
   }
 }
 
-export default WorkoutPlan;
+export default CreateExercise;
