@@ -13,12 +13,6 @@ class CreateExercise extends Component {
     this.setState({ value: event.target.value });
   };
 
-  handleChecked = () => {
-    this.setState(({ completed }) => ({
-      completed: !completed
-    }));
-  };
-
   render() {
     return (
       <div>

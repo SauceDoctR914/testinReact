@@ -5,7 +5,8 @@ class Exercise extends Component {
     description: this.props.exercise.description,
     date: this.props.exercise.date,
     weight: this.props.exercise.weight,
-    reps: this.props.exercise.reps
+    reps: this.props.exercise.reps,
+    complete: false
   };
   handleChecked = () => {
     this.setState(({ completed }) => ({
@@ -24,7 +25,7 @@ class Exercise extends Component {
           name="complete"
           type="checkbox"
           defaultChecked={this.state.complete}
-          onChange={this.handleChange}
+          onChange={this.handleChecked}
         />
       </div>
     );

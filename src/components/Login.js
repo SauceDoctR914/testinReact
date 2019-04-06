@@ -29,7 +29,7 @@ class Login extends Component {
         } else {
           localStorage.setItem("jwt", user.jwt);
           if (user.jwt) {
-            this.props.history.push(`/${this.state.auth.email}/homepage`);
+            console.log("user", user);
           }
         }
       })
