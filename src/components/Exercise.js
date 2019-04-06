@@ -2,20 +2,19 @@ import React, { Component } from "react";
 
 class Exercise extends Component {
   state = {
-    description: "",
-    date: "",
-    weight: null,
-    reps: null,
-    complete: false
+    description: this.props.exercise.description,
+    date: this.props.exercise.date,
+    weight: this.props.exercise.weight,
+    reps: this.props.exercise.reps
   };
   render() {
     return (
       <div>
-        <div>{this.state.description}</div>
-        <div>{this.state.date}</div>
-        <div>{this.state.weight}</div>
-        <div>{this.state.reps}</div>
-        <div>{this.state.complete}</div>
+        <div id="description">{this.state.description}</div>
+        <div id="date">{this.state.date}</div>
+        <div id="weight">{this.state.weight}</div>
+        <div id="reps">{this.state.reps}</div>
+        <div id="complete">{this.state.complete}</div>
       </div>
     );
   }

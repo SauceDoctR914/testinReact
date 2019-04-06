@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Exercise from "./Exercise";
-class WorkoutPlan extends Component {
+class WorkoutsContainer extends Component {
   mapWorkouts = () => {
     this.props.workouts.map(exercise => (
       <Exercise key={exercise.name} exercise={exercise} />
@@ -11,4 +11,4 @@ class WorkoutPlan extends Component {
   }
 }
 
-export default WorkoutPlan;
+export default WorkoutsContainer;
