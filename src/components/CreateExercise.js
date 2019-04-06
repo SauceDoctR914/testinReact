@@ -78,12 +78,6 @@ class CreateExercise extends Component {
               20
             ]}
           />
-          <input
-            name="complete"
-            type="checkbox"
-            defaultChecked={this.state.complete}
-            onChange={this.handleChange}
-          />
           <input type="submit" value="Submit" />
         </form>
       </div>

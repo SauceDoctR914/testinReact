@@ -7,6 +7,11 @@ class Exercise extends Component {
     weight: this.props.exercise.weight,
     reps: this.props.exercise.reps
   };
+  handleChecked = () => {
+    this.setState(({ completed }) => ({
+      completed: !completed
+    }));
+  };
   render() {
     return (
       <div>
@@ -15,6 +20,12 @@ class Exercise extends Component {
         <div id="weight">{this.state.weight}</div>
         <div id="reps">{this.state.reps}</div>
         <div id="complete">{this.state.complete}</div>
+        <input
+          name="complete"
+          type="checkbox"
+          defaultChecked={this.state.complete}
+          onChange={this.handleChange}
+        />
       </div>
     );
   }
