@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-
+import Moment from "moment";
 class CreateExercise extends Component {
   state = {
     description: "",
-    date: "",
+    date: Moment().format("MMMM Do, YYYY"),
     weight: null,
     reps: null,
     complete: false
