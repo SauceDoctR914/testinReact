@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Exercise from "./Exercise";
+import Exercise from "components/Exercise";
 class WorkoutsContainer extends Component {
   mapWorkouts = () => {
     this.props.workouts.map(exercise => (

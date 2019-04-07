@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Exercise from "Exercise";
+import Exercise from "components/Exercise";
 class WorkoutPlan extends Component {
   render() {
     return <div />;
