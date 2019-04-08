@@ -14,7 +14,20 @@ class Calendar extends Component {
       </th>
     );
   });
+
+  firstDayOfMonth = () => {
+    let dateObject = this.state.dateObject;
+    let firstDay = moment(dateObject)
+      .startOf("month")
+      .format("d");
+    return firstDay;
+  };
+
   render() {
+    blankArea = [];
+    for (let i = 0; i < this.firstDayOfMonth(); i++) {
+      blankArea.push(<td className="calendar-day empty">{""}</td>);
+    }
     return <div />;
   }
 }
