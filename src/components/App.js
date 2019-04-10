@@ -1,6 +1,7 @@
 import React from "react";
 import CommentBox from "components/CommentBox";
 import CommentList from "components/CommentList";
+import SignUp from "components/SignUp";
 import { Route, Switch } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 
@@ -11,6 +12,16 @@ export default () => {
       <Switch>
         <Route
           exact
+          path="/"
+          render={routerProps => <Login {...routerProps} />}
+        />
+        <Route
+          exact
+          path="/signup"
+          render={routerProps => <SignUp {...routerProps} />}
+        />
+        <Route
+          exact
           path="/homepage"
           render={routerProps => <HomePage {...routerProps} />}
         />
@@ -18,11 +29,6 @@ export default () => {
           exact
           path="/workouts"
           render={routerProps => <WorkoutsContainer {...routerProps} />}
-        />
-        <Route
-          exact
-          path="/"
-          render={routerProps => <Login {...routerProps} />}
         />
       </Switch>
       <div>

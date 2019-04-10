@@ -8,7 +8,7 @@ class SignUp extends Component {
   };
   componentDidMount() {}
 
-  Signup = async obj => {
+  signup = async obj => {
     let URL;
     try {
       let response = await fetch(URL, {
@@ -41,7 +41,7 @@ class SignUp extends Component {
           <input name="Email">Email</input>
           <br />
           <input name="Password">Password</input>
-          <input type="submit" onClick={this.login(e.target.value)}>
+          <input type="submit" onClick={this.signup(e.target.value)}>
             SignUp
           </input>
         </form>
