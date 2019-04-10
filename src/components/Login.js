@@ -46,7 +46,16 @@ class Login extends Component {
   render() {
     return (
       <div>
-        <div>gavin</div>
+        <form>
+          <input name="username">Username</input>
+          <br />
+          <input name="Email">Email</input>
+          <br />
+          <input name="Password">Password</input>
+          <input type="submit" onClick={this.login(e.target.value)}>
+            Login
+          </input>
+        </form>
       </div>
     );
   }
