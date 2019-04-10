@@ -8,9 +8,9 @@ class Login extends Component {
   };
   componentDidMount() {}
 
-  login = obj => {
+  login = async obj => {
     let URL;
-    fetch(URL, {
+    let response = await fetch(URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -22,7 +22,7 @@ class Login extends Component {
         password: this.state.password
       })
     })
-      .then(res => res.json())
+      let jsonRes = await response.json())
       .then(user => {
         if (user.error) {
           this.setState({ errors: true });
