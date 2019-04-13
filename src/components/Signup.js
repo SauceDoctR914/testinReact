@@ -41,7 +41,7 @@ class SignUp extends Component {
           <input name="Email">Email</input>
           <br />
           <input name="Password">Password</input>
-          <input type="submit" onClick={this.signup(e.target.value)}>
+          <input type="submit" onClick={e => this.signup(e.target.value)}>
             SignUp
           </input>
         </form>

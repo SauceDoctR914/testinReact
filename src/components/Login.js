@@ -52,7 +52,7 @@ class Login extends Component {
           <input name="Email">Email</input>
           <br />
           <input name="Password">Password</input>
-          <input type="submit" onClick={this.login(e.target.value)}>
+          <input type="submit" onClick={e => this.login(e.target.value)}>
             Login
           </input>
           <Link

@@ -2,6 +2,9 @@ import React from "react";
 import CommentBox from "components/CommentBox";
 import CommentList from "components/CommentList";
 import SignUp from "components/SignUp";
+import Login from "components/Login";
+import HomePage from "components/HomePage";
+import WorkoutsContainer from "components/WorkoutsContainer";
 import { Route, Switch } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 
